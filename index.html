@@ -83,6 +83,15 @@
     border-bottom:1px solid var(--line);
   }
   .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-block:14px;}
+  .brand-group{display:flex;align-items:center;gap:12px;}
+  .brand-mark{
+    width:42px;height:42px;flex-shrink:0;border-radius:50%;
+    background:radial-gradient(circle at 35% 28%, var(--mostaza) 0%, var(--terracota-deep) 100%);
+    display:flex;align-items:center;justify-content:center;color:#FBEFE2;
+    overflow:hidden;
+  }
+  .brand-mark img{width:100%;height:100%;object-fit:cover;}
+  .brand-mark svg{width:22px;height:22px;}
   .brand{display:flex;flex-direction:column;line-height:1.1;}
   .brand strong{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:600;color:var(--ink-strong);}
   .brand span{font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--terracota-deep);margin-top:2px;}
@@ -91,6 +100,8 @@
   .nav-links a:hover{opacity:1;}
   .nav-links .nav-anchor{display:inline;}
   @media (max-width:700px){
+    .brand-mark{width:34px;height:34px;}
+    .brand-mark svg{width:18px;height:18px;}
     .brand strong{font-size:1.1rem;}
     .brand span{font-size:0.6rem;}
     .nav-links{gap:14px;}
@@ -176,7 +187,8 @@
     background:var(--cream-deep);
     border-radius:18px;
   }
-  .ritual .icon{font-size:1.9rem;}
+  .ritual .icon{display:flex;justify-content:center;color:var(--terracota-deep);}
+  .ritual .icon svg{width:38px;height:38px;}
   .ritual h3{font-size:1.05rem;font-weight:600;margin-top:12px;}
   .ritual p{font-size:0.88rem;margin-top:8px;opacity:0.85;}
   .ritual-arrow{display:none;color:var(--terracota-deep);font-size:1.3rem;align-self:center;}
@@ -312,9 +324,12 @@
 <body>
 <nav class="nav">
   <div class="wrap">
-    <div class="brand">
-      <strong>Laura Duque</strong>
-      <span>Taller Creativo &amp; Café</span>
+    <div class="brand-group">
+      <div class="brand-mark" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19h20v7a10 10 0 0 1-10 10 10 10 0 0 1-10-10v-7Z"/><path d="M29 21h3a4.5 4.5 0 0 1 0 9h-3"/><path d="M19 9.3c-1.7-2-4.6-.2-4.6 1.8 0 2.1 2 3.6 4.6 5.7 2.6-2.1 4.6-3.6 4.6-5.7 0-2-2.9-3.8-4.6-1.8Z"/></svg></div>
+      <div class="brand">
+        <strong>Laura Duque</strong>
+        <span>Taller Creativo &amp; Café</span>
+      </div>
     </div>
     <div class="nav-links">
       <a class="nav-anchor" href="#experiencias">Experiencias</a>
@@ -357,11 +372,26 @@
       <p class="lede">No es un protocolo de atención. Es una filosofía. Cada persona que entra vive cinco momentos.</p>
     </div>
     <div class="rituales-grid">
-      <div class="ritual"><div class="icon">🌿</div><h3>Llegar</h3><p>Sentirse bienvenida desde el primer paso.</p></div>
-      <div class="ritual"><div class="icon">☕</div><h3>Saborear</h3><p>Disfrutar una bebida preparada con cuidado.</p></div>
-      <div class="ritual"><div class="icon">🎨</div><h3>Crear</h3><p>Aprender, explorar o simplemente inspirarse.</p></div>
-      <div class="ritual"><div class="icon">🤍</div><h3>Conectar</h3><p>Conversar, compartir y sentirse parte del lugar.</p></div>
-      <div class="ritual"><div class="icon">✨</div><h3>Volver</h3><p>Salir con ganas de regresar pronto.</p></div>
+      <div class="ritual">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 38V16"/><path d="M22 24c0-7 5-12 12-13-1 7-5 12-12 13Z"/><path d="M22 30c0-6-4-10-10-11 1 6 4 10 10 11Z"/></svg></div>
+        <h3>Llegar</h3><p>Sentirse bienvenida desde el primer paso.</p>
+      </div>
+      <div class="ritual">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19h20v7a10 10 0 0 1-10 10 10 10 0 0 1-10-10v-7Z"/><path d="M29 21h3a4.5 4.5 0 0 1 0 9h-3"/><path d="M19 9.3c-1.7-2-4.6-.2-4.6 1.8 0 2.1 2 3.6 4.6 5.7 2.6-2.1 4.6-3.6 4.6-5.7 0-2-2.9-3.8-4.6-1.8Z"/></svg></div>
+        <h3>Saborear</h3><p>Disfrutar una bebida preparada con cuidado.</p>
+      </div>
+      <div class="ritual">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M31 7 17 21"/><path d="M31 7c2 0 4.2 2.1 4.2 4.2 0 1-.5 2-1.2 2.6L20 27.8"/><path d="M17 21c-2.2 1-3.4 3.1-3.4 6.2 0 2.1 1.1 4.1 3 5.1 3.1-1 5.1-3 6.1-6.1 0-2.1-1-4.2-3.1-5.2Z"/></svg></div>
+        <h3>Crear</h3><p>Aprender, explorar o simplemente inspirarse.</p>
+      </div>
+      <div class="ritual">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 34C11 26 8 20 8 15c0-4 3-7 7-7 3 0 5.5 1.8 7 4.5C23.5 9.8 26 8 29 8c4 0 7 3 7 7 0 5-3 11-14 19Z"/></svg></div>
+        <h3>Conectar</h3><p>Conversar, compartir y sentirse parte del lugar.</p>
+      </div>
+      <div class="ritual">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 8c1 6 3 8 9 9-6 1-8 3-9 9-1-6-3-8-9-9 6-1 8-3 9-9Z"/><circle cx="10" cy="31" r="1.6" fill="currentColor" stroke="none"/><circle cx="35" cy="15" r="1.2" fill="currentColor" stroke="none"/></svg></div>
+        <h3>Volver</h3><p>Salir con ganas de regresar pronto.</p>
+      </div>
     </div>
   </div>
 </section>
