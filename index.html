@@ -1,0 +1,506 @@
+<title>Laura Duque Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F4E3CE;
+    --cream-deep:#EAD2B4;
+    --ink:#422817;
+    --ink-strong:#2B160B;
+    --mostaza:#C4822A;
+    --mostaza-deep:#A66A1E;
+    --terracota:#C76B4A;
+    --terracota-deep:#A8502F;
+    --night:#20130B;
+    --night-deep:#160C06;
+    --glow:#E8A94A;
+    --line: rgba(66,40,23,0.16);
+    --paper-shadow: 0 1px 0 rgba(66,40,23,0.08);
+    --max: 1120px;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Lora', Georgia, 'Times New Roman', serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  h1,h2,h3{
+    font-family:'Fraunces', Georgia, serif;
+    color:var(--ink-strong);
+    margin:0;
+    text-wrap:balance;
+  }
+  p{margin:0;}
+  .wrap{
+    max-width:var(--max);
+    margin:0 auto;
+    padding-inline:24px;
+  }
+  section{padding-block:88px;}
+  @media (max-width:640px){
+    section{padding-block:56px;}
+  }
+
+  /* ---------- ribbon label (echoes the real Laura Duque menu banners) ---------- */
+  .ribbon{
+    display:inline-block;
+    position:relative;
+    background:var(--terracota);
+    color:#FBEFE2;
+    font-family:'Lora',serif;
+    font-weight:600;
+    font-size:12.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    padding:0.62em 1.6em;
+    clip-path:polygon(2.5% 0%, 97.5% 0%, 100% 50%, 97.5% 100%, 2.5% 100%, 0% 50%);
+  }
+  .ribbon--on-dark{background:var(--mostaza);color:var(--night-deep);}
+
+  .eyebrow-row{display:flex;justify-content:center;margin-bottom:22px;}
+  .section-head{text-align:center;max-width:640px;margin:0 auto 52px;}
+  .section-head h2{font-size:clamp(1.7rem,3.2vw,2.5rem);font-weight:600;margin-top:18px;}
+  .section-head .lede{margin-top:16px;font-size:1.05rem;color:var(--ink);opacity:0.88;}
+
+  /* ---------- nav ---------- */
+  .nav{
+    position:sticky;top:0;z-index:20;
+    background:rgba(244,227,206,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-block:14px;}
+  .brand{display:flex;flex-direction:column;line-height:1.1;}
+  .brand strong{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:600;color:var(--ink-strong);}
+  .brand span{font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--terracota-deep);margin-top:2px;}
+  .nav-links{display:flex;align-items:center;gap:28px;}
+  .nav-links a{font-size:0.92rem;text-decoration:none;color:var(--ink);opacity:0.85;}
+  .nav-links a:hover{opacity:1;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    border-radius:999px;
+    padding:0.85em 1.6em;
+    font-family:'Lora',serif;
+    font-weight:600;
+    font-size:0.95rem;
+    text-decoration:none;
+    border:1.5px solid transparent;
+    white-space:nowrap;
+  }
+  .btn:focus-visible{outline:2px solid var(--mostaza-deep);outline-offset:3px;}
+  .btn-solid{background:var(--mostaza);color:#2B1706;}
+  .btn-solid:hover{background:var(--mostaza-deep);}
+  .btn-outline-dark{border-color:rgba(251,239,226,0.55);color:#FBEFE2;background:transparent;}
+  .btn-outline-dark:hover{border-color:#FBEFE2;background:rgba(251,239,226,0.08);}
+  .btn-outline-light{border-color:var(--ink);color:var(--ink);background:transparent;}
+  .btn-outline-light:hover{background:rgba(66,40,23,0.06);}
+  .btn-small{padding:0.6em 1.2em;font-size:0.85rem;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    background:linear-gradient(180deg, var(--night) 0%, var(--night-deep) 100%);
+    color:#FBEFE2;
+    overflow:hidden;
+    padding-block:120px 96px;
+  }
+  @media (max-width:640px){.hero{padding-block:72px 64px;}}
+  .hero-video{
+    position:absolute;inset:0;
+    width:100%;height:100%;
+    object-fit:cover;
+    filter:saturate(0.8) brightness(0.85);
+    z-index:0;
+  }
+  .hero-overlay{
+    position:absolute;inset:0;z-index:1;
+    background:
+      linear-gradient(180deg, rgba(19,11,6,0.62) 0%, rgba(19,11,6,0.7) 45%, rgba(19,11,6,0.94) 100%),
+      radial-gradient(ellipse 65% 50% at 18% 10%, rgba(232,169,74,0.22), transparent 60%),
+      linear-gradient(150deg, rgba(199,107,74,0.28), rgba(32,19,11,0.05) 55%);
+  }
+  @media (prefers-reduced-motion:reduce){.hero-video{display:none;}}
+  .hero .wrap{position:relative;z-index:2;}
+  .hero-inner{max-width:760px;}
+  .hero h1{
+    font-size:clamp(2.3rem,5.4vw,4rem);
+    font-weight:600;
+    line-height:1.08;
+    margin-top:26px;
+    color:#FBEFE2;
+  }
+  .hero .lede{
+    margin-top:22px;
+    font-size:1.18rem;
+    max-width:52ch;
+    color:#F1DFC9;
+    opacity:0.92;
+  }
+  .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-top:36px;}
+  .hero-chips{display:flex;gap:28px;flex-wrap:wrap;margin-top:56px;padding-top:28px;border-top:1px solid rgba(251,239,226,0.18);}
+  .hero-chip{display:flex;align-items:center;gap:10px;font-size:0.88rem;color:#EAD7BC;}
+  .hero-chip .dot{font-size:1.05rem;}
+
+  /* ---------- rituales ---------- */
+  .rituales-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
+    counter-reset:ritual;
+  }
+  @media (max-width:900px){.rituales-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:480px){.rituales-grid{grid-template-columns:1fr;}}
+  .ritual{
+    text-align:center;
+    padding:28px 16px;
+    background:var(--cream-deep);
+    border-radius:18px;
+  }
+  .ritual .icon{font-size:1.9rem;}
+  .ritual h3{font-size:1.05rem;font-weight:600;margin-top:12px;}
+  .ritual p{font-size:0.88rem;margin-top:8px;opacity:0.85;}
+  .ritual-arrow{display:none;color:var(--terracota-deep);font-size:1.3rem;align-self:center;}
+  @media (min-width:901px){
+    .rituales-grid{align-items:stretch;}
+  }
+
+  /* ---------- experiencias (motor 1) ---------- */
+  .exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  @media (max-width:860px){.exp-grid{grid-template-columns:1fr;}}
+  .exp-card{
+    background:#FBF3E7;
+    border:1px solid var(--line);
+    border-radius:22px;
+    padding:30px 26px;
+    display:flex;flex-direction:column;
+    gap:14px;
+  }
+  .exp-card .tag{
+    font-family:'Caveat',cursive;
+    font-size:1.3rem;
+    color:var(--terracota-deep);
+    line-height:1;
+  }
+  .exp-card h3{font-size:1.3rem;font-weight:600;}
+  .exp-card p{font-size:0.92rem;opacity:0.85;}
+  .exp-card .meta{
+    display:flex;justify-content:space-between;align-items:baseline;
+    font-size:0.85rem;color:var(--ink);opacity:0.75;
+    border-top:1px dashed var(--line);
+    padding-top:14px;margin-top:auto;
+  }
+  .exp-card .price{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;color:var(--terracota-deep);opacity:1;}
+  .exp-card .btn{align-self:flex-start;margin-top:6px;}
+
+  /* ---------- cafe (motor 2) ---------- */
+  .cafe-section{background:var(--cream-deep);}
+  .cafe-layout{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+  @media (max-width:860px){.cafe-layout{grid-template-columns:1fr;gap:36px;}}
+  .cafe-scene{
+    position:relative;
+    aspect-ratio:4/5;
+    border-radius:28px;
+    overflow:hidden;
+    background:
+      radial-gradient(circle at 30% 20%, rgba(255,255,255,0.35), transparent 45%),
+      linear-gradient(155deg, #E7C193 0%, var(--terracota) 55%, var(--terracota-deep) 100%);
+  }
+  .cafe-scene .steam{position:absolute;opacity:0.5;}
+  .cafe-scene figcaption{
+    position:absolute;left:0;right:0;bottom:0;
+    padding:18px 22px;
+    background:linear-gradient(0deg, rgba(43,23,11,0.55), transparent);
+    color:#FBEFE2;font-size:0.8rem;letter-spacing:0.04em;
+  }
+  .cafe-copy h2{font-size:clamp(1.6rem,3vw,2.3rem);}
+  .cafe-copy .lede{margin-top:14px;font-size:1.02rem;opacity:0.88;}
+  .menu-list{margin-top:26px;display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line);}
+  .menu-row{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid var(--line);}
+  .menu-row .name{font-weight:600;color:var(--ink-strong);}
+  .menu-row .desc{display:block;font-size:0.82rem;font-style:italic;opacity:0.75;margin-top:2px;}
+  .menu-row .price{font-family:'Fraunces',serif;font-weight:600;white-space:nowrap;}
+  .cafe-copy .btn{margin-top:26px;}
+  .qr-note{margin-top:14px;font-size:0.8rem;opacity:0.7;}
+
+  /* ---------- laura ---------- */
+  .laura-layout{display:grid;grid-template-columns:0.85fr 1.15fr;gap:56px;align-items:center;}
+  @media (max-width:860px){.laura-layout{grid-template-columns:1fr;gap:32px;}}
+  .laura-portrait{
+    aspect-ratio:3/4;
+    border-radius:28px;
+    background:
+      radial-gradient(circle at 70% 15%, rgba(255,255,255,0.3), transparent 40%),
+      linear-gradient(160deg, var(--mostaza) 0%, var(--ink) 120%);
+    position:relative;
+  }
+  .laura-portrait span{
+    position:absolute;bottom:18px;left:18px;right:18px;
+    font-family:'Caveat',cursive;color:#FBEFE2;font-size:1.5rem;
+  }
+  .laura-copy .kicker{font-family:'Caveat',cursive;font-size:1.4rem;color:var(--terracota-deep);}
+  .laura-copy h2{margin-top:8px;font-size:clamp(1.7rem,3vw,2.4rem);}
+  .laura-copy p{margin-top:16px;font-size:1.02rem;opacity:0.88;}
+  .laura-copy p + p{margin-top:14px;}
+
+  /* ---------- ubicacion ---------- */
+  .loc-section{background:var(--cream-deep);}
+  .loc-layout{display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;}
+  @media (max-width:860px){.loc-layout{grid-template-columns:1fr;}}
+  .loc-card{
+    background:#FBF3E7;border:1px solid var(--line);border-radius:22px;padding:28px;
+  }
+  .loc-card h3{font-size:1.05rem;font-weight:600;display:flex;align-items:center;gap:8px;}
+  .loc-card p{margin-top:10px;font-size:0.92rem;opacity:0.85;}
+  .hours-table{margin-top:18px;display:flex;flex-direction:column;gap:10px;}
+  .hours-row{display:flex;justify-content:space-between;font-size:0.92rem;}
+  .hours-row .day{font-weight:600;}
+  .hours-row.closed{opacity:0.55;}
+
+  /* ---------- faq ---------- */
+  .faq-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px;}
+  details{
+    background:#FBF3E7;border:1px solid var(--line);border-radius:16px;padding:18px 22px;
+  }
+  summary{
+    cursor:pointer;font-family:'Fraunces',serif;font-weight:600;font-size:1.02rem;
+    list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";font-size:1.3rem;color:var(--terracota-deep);}
+  details[open] summary::after{content:"–";}
+  details p{margin-top:12px;font-size:0.94rem;opacity:0.85;}
+
+  /* ---------- cta final ---------- */
+  .cta-final{
+    background:linear-gradient(180deg, var(--night-deep) 0%, var(--night) 100%);
+    color:#FBEFE2;text-align:center;
+  }
+  .cta-final h2{color:#FBEFE2;font-size:clamp(1.8rem,3.6vw,2.7rem);}
+  .cta-final .lede{margin-top:14px;font-size:1.05rem;color:#E9D6BC;opacity:0.9;}
+  .cta-final .hero-ctas{justify-content:center;margin-top:32px;}
+  .cta-final .handle{margin-top:28px;font-size:0.9rem;opacity:0.75;}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--ink-strong);color:#E9D6BC;padding-block:40px;font-size:0.85rem;}
+  .foot-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;opacity:0.85;}
+  footer a{text-decoration:none;opacity:0.9;}
+  footer a:hover{opacity:1;text-decoration:underline;}
+</style>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="brand">
+      <strong>Laura Duque</strong>
+      <span>Taller Creativo &amp; Café</span>
+    </div>
+    <div class="nav-links">
+      <a href="#experiencias">Experiencias</a>
+      <a href="#cafe">Café</a>
+      <a href="#laura">Laura</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a class="btn btn-solid btn-small" href="https://wa.me/message/KCWQV4ERQEM4J1" target="_blank" rel="noopener">Reservar</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <video class="hero-video" autoplay muted loop playsinline aria-hidden="true">
+    <source src="hero-video.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="ribbon ribbon--on-dark">Recién inaugurados en Santa Elena</div>
+      <h1>No vendemos café.<br>Creamos experiencias.</h1>
+      <p class="lede">Un estudio creativo y cafetería en Santa Elena (Antioquia), donde el arte, el café y la calidez humana se encuentran en un mismo lugar.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-solid" href="https://wa.me/message/KCWQV4ERQEM4J1" target="_blank" rel="noopener">Reserva tu experiencia →</a>
+        <a class="btn btn-outline-dark" href="#cafe">Ven por un café</a>
+      </div>
+      <div class="hero-chips">
+        <div class="hero-chip"><span class="dot">🎨</span> Fundadora con años de trayectoria enseñando arte</div>
+        <div class="hero-chip"><span class="dot">📍</span> Santa Elena, Antioquia</div>
+        <div class="hero-chip"><span class="dot">📸</span> @lauraduquedesign</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="rituales">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow-row"><span class="ribbon">Cómo se vive Laura Duque</span></div>
+      <h2>Los Rituales Creativos</h2>
+      <p class="lede">No es un protocolo de atención. Es una filosofía. Cada persona que entra vive cinco momentos.</p>
+    </div>
+    <div class="rituales-grid">
+      <div class="ritual"><div class="icon">🌿</div><h3>Llegar</h3><p>Sentirse bienvenida desde el primer paso.</p></div>
+      <div class="ritual"><div class="icon">☕</div><h3>Saborear</h3><p>Disfrutar una bebida preparada con cuidado.</p></div>
+      <div class="ritual"><div class="icon">🎨</div><h3>Crear</h3><p>Aprender, explorar o simplemente inspirarse.</p></div>
+      <div class="ritual"><div class="icon">🤍</div><h3>Conectar</h3><p>Conversar, compartir y sentirse parte del lugar.</p></div>
+      <div class="ritual"><div class="icon">✨</div><h3>Volver</h3><p>Salir con ganas de regresar pronto.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="experiencias">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow-row"><span class="ribbon">El corazón del negocio</span></div>
+      <h2>Experiencias creativas</h2>
+      <p class="lede">No vendemos clases. Vendemos experiencias — con materiales, acompañamiento, una bebida incluida y un recuerdo para llevar.</p>
+    </div>
+    <div class="exp-grid">
+      <article class="exp-card">
+        <span class="tag">Taller permanente</span>
+        <h3>Macramé</h3>
+        <p>Aprende punto por punto, a tu ritmo, acompañada de una bebida de la carta. Materiales incluidos.</p>
+        <div class="meta"><span>Cupos limitados</span></div>
+        <a class="btn btn-outline-light btn-small" href="https://wa.me/message/KCWQV4ERQEM4J1" target="_blank" rel="noopener">Consultar cupo →</a>
+      </article>
+      <article class="exp-card">
+        <span class="tag">Taller permanente</span>
+        <h3>Pintura decorativa</h3>
+        <p>Una tarde para soltar la mente y crear con las manos, sin experiencia previa necesaria.</p>
+        <div class="meta"><span>Cupos limitados</span></div>
+        <a class="btn btn-outline-light btn-small" href="https://wa.me/message/KCWQV4ERQEM4J1" target="_blank" rel="noopener">Consultar cupo →</a>
+      </article>
+      <article class="exp-card">
+        <span class="tag">Experiencia turística · 90 min</span>
+        <h3>Crea tu recuerdo de Santa Elena</h3>
+        <p>Mini taller + materiales + bebida + postre + fotografía + empaque. Te llevas tu creación y un recuerdo real del territorio.</p>
+        <div class="meta"><span>Desde</span><span class="price">$120.000</span></div>
+        <a class="btn btn-outline-light btn-small" href="https://wa.me/message/KCWQV4ERQEM4J1" target="_blank" rel="noopener">Reservar por WhatsApp →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="cafe" class="cafe-section">
+  <div class="wrap">
+    <div class="cafe-layout">
+      <figure class="cafe-scene">
+        <figcaption>Foto real del local próximamente — este espacio queda listo para tu fotografía.</figcaption>
+      </figure>
+      <div class="cafe-copy">
+        <div class="ribbon">El segundo motor</div>
+        <h2>Café de experiencia</h2>
+        <p class="lede">No hay un menú enorme. Hay un menú cuidadosamente diseñado — cada bebida cuenta una historia.</p>
+        <div class="menu-list">
+          <div class="menu-row"><span class="name">Espresso</span><span class="price">$7.000</span></div>
+          <div class="menu-row"><span class="name">Latte<span class="desc">Espresso con leche cremosa</span></span><span class="price">$12.000</span></div>
+          <div class="menu-row"><span class="name">Capuccino</span><span class="price">$11.000</span></div>
+          <div class="menu-row"><span class="name">Chocolate en chocolatera<span class="desc">Con bombones, malvaviscos, canela y pan artesanal</span></span><span class="price">$18.000</span></div>
+        </div>
+        <a class="btn btn-outline-light" href="https://wa.me/message/KCWQV4ERQEM4J1" target="_blank" rel="noopener">Preguntar por la carta completa →</a>
+        <p class="qr-note">📱 En el local, cada mesa tiene su propio código QR con la Carta Digital: bebidas, repostería y tienda creativa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="laura">
+  <div class="wrap">
+    <div class="laura-layout">
+      <div class="laura-portrait"><span>“El arte tiene el poder de transformar un día, una emoción, una vida.”</span></div>
+      <div class="laura-copy">
+        <div class="kicker">El quinto motor eres tú</div>
+        <h2>Laura Duque</h2>
+        <p>Durante años, Laura ha enseñado macramé, pintura decorativa y scrapbook a niños, jóvenes y adultos — en entidades públicas, empresas y comunidades de toda la región.</p>
+        <p>Laura Duque Design nace de una idea simple: que ese trabajo tuviera, por fin, un lugar propio. Un espacio donde no solo se asiste a una clase, sino que se vive una experiencia completa.</p>
+        <p>Cuando el letrero dice <em>"Hoy Laura está dando taller"</em>, es literal — ella dirige personalmente cada experiencia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ubicacion" class="loc-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow-row"><span class="ribbon">Santa Elena, Antioquia</span></div>
+      <h2>Encuéntranos</h2>
+    </div>
+    <div class="loc-layout">
+      <div class="loc-card">
+        <h3>📍 Cómo llegar</h3>
+        <p>A unos 30–40 minutos de Medellín por la Vía Las Palmas / Parque Arví, en la vereda El Placer, junto al Restaurante Tierra Alta.</p>
+        <p>Un espacio pensado con cinco zonas: bienvenida, barra de café, vitrina de productos artesanales, zona de talleres y un rincón fotográfico.</p>
+      </div>
+      <div class="loc-card">
+        <h3>🕐 Horario</h3>
+        <div class="hours-table">
+          <div class="hours-row"><span class="day">Martes a jueves</span><span>2:00 p.m. – 7:00 p.m.</span></div>
+          <div class="hours-row"><span class="day">Viernes a domingo</span><span>10:00 a.m. – 7:00 p.m.</span></div>
+          <div class="hours-row closed"><span class="day">Lunes</span><span>Cerrado</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow-row"><span class="ribbon">Antes de venir</span></div>
+      <h2>Preguntas frecuentes</h2>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>¿Necesito experiencia artística para tomar un taller?</summary>
+        <p>No. Cada experiencia está diseñada para cualquier nivel, desde quienes nunca han creado nada hasta quienes ya tienen técnica.</p>
+      </details>
+      <details>
+        <summary>¿Puedo ir solo por un café, sin taller?</summary>
+        <p>Sí. El café de experiencia funciona de forma independiente — puedes venir solo a disfrutar una bebida y el espacio.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto dura una experiencia?</summary>
+        <p>Depende del taller. La experiencia turística "Crea tu recuerdo de Santa Elena" dura 90 minutos, materiales incluidos.</p>
+      </details>
+      <details>
+        <summary>¿Hacen eventos privados o para empresas?</summary>
+        <p>Sí. Diseñamos experiencias para cumpleaños, despedidas, aniversarios e integraciones o talleres corporativos.</p>
+      </details>
+      <details>
+        <summary>¿Cuál es el horario de atención?</summary>
+        <p>Martes a jueves de 2:00 p.m. a 7:00 p.m., viernes a domingo de 10:00 a.m. a 7:00 p.m. Los lunes permanecemos cerrados.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="wrap">
+    <h2>¿Lista para vivir la experiencia?</h2>
+    <p class="lede">Cupos limitados cada semana en Santa Elena.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-solid" href="https://wa.me/message/KCWQV4ERQEM4J1" target="_blank" rel="noopener">Reservar por WhatsApp →</a>
+      <a class="btn btn-outline-dark" href="https://www.instagram.com/lauraduquedesign/" target="_blank" rel="noopener">Ver @lauraduquedesign</a>
+    </div>
+    <p class="handle">Taller Creativo &amp; Café · Santa Elena, Antioquia</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-row">
+    <span>© Laura Duque Design — Taller Creativo &amp; Café</span>
+    <span><a href="https://www.instagram.com/lauraduquedesign/" target="_blank" rel="noopener">Instagram</a> · <a href="https://wa.me/message/KCWQV4ERQEM4J1" target="_blank" rel="noopener">WhatsApp</a></span>
+  </div>
+</footer>
+
+<script>
+  try{
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      var v = document.querySelector('.hero-video');
+      if (v){ v.pause(); v.removeAttribute('autoplay'); }
+    }
+  }catch(e){}
+</script>
