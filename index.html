@@ -209,11 +209,9 @@
     aspect-ratio:4/5;
     border-radius:28px;
     overflow:hidden;
-    background:
-      radial-gradient(circle at 30% 20%, rgba(255,255,255,0.35), transparent 45%),
-      linear-gradient(155deg, #E7C193 0%, var(--terracota) 55%, var(--terracota-deep) 100%);
+    background:var(--terracota-deep);
   }
-  .cafe-scene .steam{position:absolute;opacity:0.5;}
+  .cafe-scene img{width:100%;height:100%;object-fit:cover;}
   .cafe-scene figcaption{
     position:absolute;left:0;right:0;bottom:0;
     padding:18px 22px;
@@ -252,8 +250,11 @@
 
   /* ---------- ubicacion ---------- */
   .loc-section{background:var(--cream-deep);}
-  .loc-layout{display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;}
+  .loc-layout{display:grid;grid-template-columns:0.9fr 1.1fr;gap:48px;}
   @media (max-width:860px){.loc-layout{grid-template-columns:1fr;}}
+  .loc-photo{border-radius:22px;overflow:hidden;aspect-ratio:4/5;}
+  .loc-photo img{width:100%;height:100%;object-fit:cover;}
+  .loc-cards{display:flex;flex-direction:column;gap:24px;}
   .loc-card{
     background:#FBF3E7;border:1px solid var(--line);border-radius:22px;padding:28px;
   }
@@ -388,7 +389,8 @@
   <div class="wrap">
     <div class="cafe-layout">
       <figure class="cafe-scene">
-        <figcaption>Foto real del local próximamente — este espacio queda listo para tu fotografía.</figcaption>
+        <img src="cafe-mesa.jpg" alt="Torta red velvet y café servidos en una mesa del local, con la Carta Digital junto a la ventana">
+        <figcaption>Una mesa cualquiera en Laura Duque — vista a la montaña incluida.</figcaption>
       </figure>
       <div class="cafe-copy">
         <div class="ribbon">El segundo motor</div>
@@ -429,17 +431,22 @@
       <h2>Encuéntranos</h2>
     </div>
     <div class="loc-layout">
-      <div class="loc-card">
-        <h3>📍 Cómo llegar</h3>
-        <p>A unos 30–40 minutos de Medellín por la Vía Las Palmas / Parque Arví, en la vereda El Placer, junto al Restaurante Tierra Alta.</p>
-        <p>Un espacio pensado con cinco zonas: bienvenida, barra de café, vitrina de productos artesanales, zona de talleres y un rincón fotográfico.</p>
-      </div>
-      <div class="loc-card">
-        <h3>🕐 Horario</h3>
-        <div class="hours-table">
-          <div class="hours-row"><span class="day">Martes a jueves</span><span>2:00 p.m. – 7:00 p.m.</span></div>
-          <div class="hours-row"><span class="day">Viernes a domingo</span><span>10:00 a.m. – 7:00 p.m.</span></div>
-          <div class="hours-row closed"><span class="day">Lunes</span><span>Cerrado</span></div>
+      <figure class="loc-photo">
+        <img src="fachada.jpg" alt="Fachada de Laura Duque Design de día, con la terraza y el letrero de la marca junto a la vía">
+      </figure>
+      <div class="loc-cards">
+        <div class="loc-card">
+          <h3>📍 Cómo llegar</h3>
+          <p>A unos 30–40 minutos de Medellín por la Vía Las Palmas / Parque Arví, en la vereda El Placer, junto al Restaurante Tierra Alta.</p>
+          <p>Un espacio pensado con cinco zonas: bienvenida, barra de café, vitrina de productos artesanales, zona de talleres y un rincón fotográfico.</p>
+        </div>
+        <div class="loc-card">
+          <h3>🕐 Horario</h3>
+          <div class="hours-table">
+            <div class="hours-row"><span class="day">Martes a jueves</span><span>2:00 p.m. – 7:00 p.m.</span></div>
+            <div class="hours-row"><span class="day">Viernes a domingo</span><span>10:00 a.m. – 7:00 p.m.</span></div>
+            <div class="hours-row closed"><span class="day">Lunes</span><span>Cerrado</span></div>
+          </div>
         </div>
       </div>
     </div>
