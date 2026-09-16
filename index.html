@@ -85,7 +85,7 @@
   .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-block:14px;}
   .brand-group{display:flex;align-items:center;gap:12px;}
   .brand-mark{
-    width:42px;height:42px;flex-shrink:0;border-radius:50%;
+    width:60px;height:60px;flex-shrink:0;border-radius:50%;
     background:radial-gradient(circle at 35% 28%, var(--mostaza) 0%, var(--terracota-deep) 100%);
     display:flex;align-items:center;justify-content:center;color:#FBEFE2;
     overflow:hidden;
@@ -100,8 +100,7 @@
   .nav-links a:hover{opacity:1;}
   .nav-links .nav-anchor{display:inline;}
   @media (max-width:700px){
-    .brand-mark{width:34px;height:34px;}
-    .brand-mark svg{width:18px;height:18px;}
+    .brand-mark{width:48px;height:48px;}
     .brand strong{font-size:1.1rem;}
     .brand span{font-size:0.6rem;}
     .nav-links{gap:14px;}
@@ -187,8 +186,8 @@
     background:var(--cream-deep);
     border-radius:18px;
   }
-  .ritual .icon{display:flex;justify-content:center;color:var(--terracota-deep);}
-  .ritual .icon svg{width:38px;height:38px;}
+  .ritual .icon{display:flex;justify-content:center;align-items:flex-end;height:52px;}
+  .ritual .icon img{height:100%;width:auto;object-fit:contain;}
   .ritual h3{font-size:1.05rem;font-weight:600;margin-top:12px;}
   .ritual p{font-size:0.88rem;margin-top:8px;opacity:0.85;}
   .ritual-arrow{display:none;color:var(--terracota-deep);font-size:1.3rem;align-self:center;}
@@ -373,23 +372,23 @@
     </div>
     <div class="rituales-grid">
       <div class="ritual">
-        <div class="icon" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 38V16"/><path d="M22 24c0-7 5-12 12-13-1 7-5 12-12 13Z"/><path d="M22 30c0-6-4-10-10-11 1 6 4 10 10 11Z"/></svg></div>
+        <div class="icon"><img src="icon-leaf.png" alt=""></div>
         <h3>Llegar</h3><p>Sentirse bienvenida desde el primer paso.</p>
       </div>
       <div class="ritual">
-        <div class="icon" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19h20v7a10 10 0 0 1-10 10 10 10 0 0 1-10-10v-7Z"/><path d="M29 21h3a4.5 4.5 0 0 1 0 9h-3"/><path d="M19 9.3c-1.7-2-4.6-.2-4.6 1.8 0 2.1 2 3.6 4.6 5.7 2.6-2.1 4.6-3.6 4.6-5.7 0-2-2.9-3.8-4.6-1.8Z"/></svg></div>
+        <div class="icon"><img src="icon-cup.png" alt=""></div>
         <h3>Saborear</h3><p>Disfrutar una bebida preparada con cuidado.</p>
       </div>
       <div class="ritual">
-        <div class="icon" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M31 7 17 21"/><path d="M31 7c2 0 4.2 2.1 4.2 4.2 0 1-.5 2-1.2 2.6L20 27.8"/><path d="M17 21c-2.2 1-3.4 3.1-3.4 6.2 0 2.1 1.1 4.1 3 5.1 3.1-1 5.1-3 6.1-6.1 0-2.1-1-4.2-3.1-5.2Z"/></svg></div>
+        <div class="icon"><img src="icon-brush.png" alt=""></div>
         <h3>Crear</h3><p>Aprender, explorar o simplemente inspirarse.</p>
       </div>
       <div class="ritual">
-        <div class="icon" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 34C11 26 8 20 8 15c0-4 3-7 7-7 3 0 5.5 1.8 7 4.5C23.5 9.8 26 8 29 8c4 0 7 3 7 7 0 5-3 11-14 19Z"/></svg></div>
+        <div class="icon"><img src="icon-heart.png" alt=""></div>
         <h3>Conectar</h3><p>Conversar, compartir y sentirse parte del lugar.</p>
       </div>
       <div class="ritual">
-        <div class="icon" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 8c1 6 3 8 9 9-6 1-8 3-9 9-1-6-3-8-9-9 6-1 8-3 9-9Z"/><circle cx="10" cy="31" r="1.6" fill="currentColor" stroke="none"/><circle cx="35" cy="15" r="1.2" fill="currentColor" stroke="none"/></svg></div>
+        <div class="icon"><img src="icon-leaf2.png" alt=""></div>
         <h3>Volver</h3><p>Salir con ganas de regresar pronto.</p>
       </div>
     </div>
@@ -441,10 +440,10 @@
         <h2>Café de experiencia</h2>
         <p class="lede">No hay un menú enorme. Hay un menú cuidadosamente diseñado — cada bebida cuenta una historia.</p>
         <div class="menu-list">
-          <div class="menu-row"><span class="name">Espresso</span><span class="price">$7.000</span></div>
-          <div class="menu-row"><span class="name">Latte<span class="desc">Espresso con leche cremosa</span></span><span class="price">$12.000</span></div>
-          <div class="menu-row"><span class="name">Capuccino</span><span class="price">$11.000</span></div>
-          <div class="menu-row"><span class="name">Chocolate en chocolatera<span class="desc">Con bombones, malvaviscos, canela y pan artesanal</span></span><span class="price">$18.000</span></div>
+          <div class="menu-row"><span class="name">Espresso</span><span class="price">$5.000</span></div>
+          <div class="menu-row"><span class="name">Latte<span class="desc">Espresso con leche cremosa</span></span><span class="price">$9.000</span></div>
+          <div class="menu-row"><span class="name">Capuccino</span><span class="price">$10.000</span></div>
+          <div class="menu-row"><span class="name">Chocolate</span><span class="price">Desde $10.000</span></div>
         </div>
         <a class="btn btn-outline-light" href="https://wa.me/message/KCWQV4ERQEM4J1" target="_blank" rel="noopener">Preguntar por la carta completa →</a>
         <p class="qr-note">📱 En el local, cada mesa tiene su propio código QR con la Carta Digital: bebidas, repostería y tienda creativa.</p>
