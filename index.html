@@ -251,19 +251,33 @@
   .cafe-copy .btn{margin-top:26px;}
   .qr-note{margin-top:14px;font-size:0.8rem;opacity:0.7;}
 
+  /* ---------- galeria ---------- */
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  .gallery-grid figure{margin:0;border-radius:22px;overflow:hidden;aspect-ratio:3/4;}
+  .gallery-grid figure.wide{grid-column:1 / -1;aspect-ratio:2.6/1;}
+  .gallery-grid img{width:100%;height:100%;object-fit:cover;display:block;}
+  @media (max-width:760px){
+    .gallery-grid{grid-template-columns:repeat(2,1fr);}
+    .gallery-grid figure.wide{aspect-ratio:16/9;}
+  }
+  @media (max-width:480px){.gallery-grid{grid-template-columns:1fr;}}
+
   /* ---------- laura ---------- */
   .laura-layout{display:grid;grid-template-columns:0.85fr 1.15fr;gap:56px;align-items:center;}
   @media (max-width:860px){.laura-layout{grid-template-columns:1fr;gap:32px;}}
   .laura-portrait{
     aspect-ratio:3/4;
     border-radius:28px;
-    background:
-      radial-gradient(circle at 70% 15%, rgba(255,255,255,0.3), transparent 40%),
-      linear-gradient(160deg, var(--mostaza) 0%, var(--ink) 120%);
+    overflow:hidden;
     position:relative;
+    margin:0;
+    background:var(--ink);
   }
+  .laura-portrait img{width:100%;height:100%;object-fit:cover;display:block;}
   .laura-portrait span{
-    position:absolute;bottom:18px;left:18px;right:18px;
+    position:absolute;bottom:0;left:0;right:0;
+    padding:48px 20px 18px;
+    background:linear-gradient(0deg, rgba(32,19,11,0.82) 0%, rgba(32,19,11,0.4) 60%, transparent 100%);
     font-family:'Caveat',cursive;color:#FBEFE2;font-size:1.5rem;
   }
   .laura-copy .kicker{font-family:'Caveat',cursive;font-size:1.4rem;color:var(--terracota-deep);}
@@ -277,6 +291,8 @@
   @media (max-width:860px){.loc-layout{grid-template-columns:1fr;}}
   .loc-photo{border-radius:22px;overflow:hidden;aspect-ratio:4/5;}
   .loc-photo img{width:100%;height:100%;object-fit:cover;}
+  .loc-photo--map{aspect-ratio:894/1264;background:var(--cream);}
+  .loc-photo--map img{object-fit:contain;}
   .loc-cards{display:flex;flex-direction:column;gap:24px;}
   .loc-card{
     background:#FBF3E7;border:1px solid var(--line);border-radius:22px;padding:28px;
@@ -452,10 +468,30 @@
   </div>
 </section>
 
+<section id="galeria">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow-row"><span class="ribbon">Un vistazo al lugar</span></div>
+      <h2>Momentos Laura Duque</h2>
+      <p class="lede">Así se ve, se siente y se saborea el estudio — directo de nuestra cámara, sin filtros de más.</p>
+    </div>
+    <div class="gallery-grid">
+      <figure class="wide"><img src="local-noche.jpg" alt="Fachada de Laura Duque Design al anochecer, con el letrero iluminado junto a la vía"></figure>
+      <figure><img src="terraza-dia.jpg" alt="Terraza de Laura Duque Design de día, con cócteles sobre la mesa"></figure>
+      <figure><img src="terraza-noche.jpg" alt="Terraza de Laura Duque Design al atardecer, con luces cálidas y cócteles"></figure>
+      <figure><img src="torta-zanahoria.jpg" alt="Torta de zanahoria en la vitrina del café"></figure>
+      <figure><img src="torta-bebida.jpg" alt="Torta y bebida servidas en el salón, con vista a la montaña"></figure>
+    </div>
+  </div>
+</section>
+
 <section id="laura">
   <div class="wrap">
     <div class="laura-layout">
-      <div class="laura-portrait"><span>“El arte tiene el poder de transformar un día, una emoción, una vida.”</span></div>
+      <figure class="laura-portrait">
+        <img src="laura.jpg" alt="Laura Duque, fundadora de Laura Duque Design">
+        <span>“El arte tiene el poder de transformar un día, una emoción, una vida.”</span>
+      </figure>
       <div class="laura-copy">
         <div class="kicker">El quinto motor eres tú</div>
         <h2>Laura Duque</h2>
@@ -474,8 +510,8 @@
       <h2>Encuéntranos</h2>
     </div>
     <div class="loc-layout">
-      <figure class="loc-photo">
-        <img src="fachada.jpg" alt="Fachada de Laura Duque Design de día, con la terraza y el letrero de la marca junto a la vía">
+      <figure class="loc-photo loc-photo--map">
+        <img src="mapa.jpg" alt="Mapa ilustrado de cómo llegar a Laura Duque Design desde Medellín, vía Las Palmas y Parque Arví">
       </figure>
       <div class="loc-cards">
         <div class="loc-card">
