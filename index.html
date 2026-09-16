@@ -281,10 +281,12 @@
   .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
   .gallery-grid figure{margin:0;border-radius:22px;overflow:hidden;aspect-ratio:3/4;}
   .gallery-grid figure.wide{grid-column:1 / -1;aspect-ratio:2.6/1;}
+  .gallery-grid figure.landscape{grid-column:span 2;aspect-ratio:4/3;}
   .gallery-grid img{width:100%;height:100%;object-fit:cover;display:block;}
   @media (max-width:760px){
     .gallery-grid{grid-template-columns:repeat(2,1fr);}
     .gallery-grid figure.wide{aspect-ratio:16/9;}
+    .gallery-grid figure.landscape{grid-column:1 / -1;}
   }
   @media (max-width:480px){.gallery-grid{grid-template-columns:1fr;}}
 
@@ -506,12 +508,17 @@
     </div>
     <div class="gallery-grid">
       <figure class="wide"><img src="local-noche.jpg" alt="Fachada de Laura Duque Design al anochecer, con el letrero iluminado junto a la vía"></figure>
+      <figure class="landscape"><img src="exterior-atardecer.jpg" alt="Fachada de Laura Duque Design al atardecer, con luces cálidas"></figure>
+      <figure class="landscape"><img src="exterior-noche2.jpg" alt="Entrada de Laura Duque Design de noche, con el logo junto a la puerta"></figure>
       <figure><img src="terraza-dia.jpg" alt="Terraza de Laura Duque Design de día, con cócteles sobre la mesa"></figure>
       <figure><img src="terraza-noche.jpg" alt="Terraza de Laura Duque Design al atardecer, con luces cálidas y cócteles"></figure>
       <figure><img src="torta-zanahoria.jpg" alt="Torta de zanahoria en la vitrina del café"></figure>
       <figure><img src="torta-bebida.jpg" alt="Torta y bebida servidas en el salón, con vista a la montaña"></figure>
-      <figure><img src="coctel-1.jpg" alt="Cóctel margarita junto al letrero de Laura Duque, promoción de cóctel a $20.000"></figure>
-      <figure><img src="coctel-2.jpg" alt="Cóctel margarita con tequila José Cuervo y triple sec, terraza de Laura Duque"></figure>
+      <figure><img src="coctel-1.jpg" alt="Cóctel margarita junto al letrero de Laura Duque, promoción de cóctel a $30.000"></figure>
+      <figure><img src="coctel-2.jpg" alt="Cóctel margarita con tequila José Cuervo y triple sec, terraza de Laura Duque, promoción a $30.000"></figure>
+      <figure><img src="mesa-carta.jpg" alt="Mesa junto a la ventana con café, postre y la Carta Digital"></figure>
+      <figure><img src="brownie-matcha.jpg" alt="Brownie con malvaviscos y matcha latte en el rincón de sillones"></figure>
+      <figure><img src="cafe-pastel.jpg" alt="Café y caracola de hojaldre recién horneada"></figure>
     </div>
   </div>
 </section>
